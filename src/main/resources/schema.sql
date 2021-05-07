@@ -2,10 +2,10 @@ drop table if exists files;
 
 create table files
 (
-    id integer NOT NULL,
-    fileName varchar(100) NOT NULL,
-    fileType varchar(50) NOT NULL,
-    fileSize integer NOT NULL,
-    fileURL varchar(200) NOT NULL,
+    id INT NOT NULL,
+    fileName VARCHAR(100) NOT NULL,
+    fileType VARCHAR(50) NOT NULL,
+    fileSize INT NOT NULL,
+    fileURL VARCHAR(200) NOT NULL,
     primary key (id)
 );

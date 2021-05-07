@@ -1,7 +1,7 @@
 package com.brianwilens.cloudnativeuploader.exception;
 
-import com.brianwilens.cloudnativeuploader.api.exceptions.BwException;
-import com.brianwilens.cloudnativeuploader.api.responses.BwResponse;
+import com.brianwilens.cloudnativeuploader.lib.exceptions.BwException;
+import com.brianwilens.cloudnativeuploader.lib.responses.BwResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

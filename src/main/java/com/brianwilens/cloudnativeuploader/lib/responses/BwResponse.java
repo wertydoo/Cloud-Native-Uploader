@@ -1,4 +1,4 @@
-package com.brianwilens.cloudnativeuploader.api.responses;
+package com.brianwilens.cloudnativeuploader.lib.responses;
 
 import lombok.Data;
 

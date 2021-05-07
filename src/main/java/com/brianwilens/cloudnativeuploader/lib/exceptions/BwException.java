@@ -1,4 +1,4 @@
-package com.brianwilens.cloudnativeuploader.api.exceptions;
+package com.brianwilens.cloudnativeuploader.lib.exceptions;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonProperty;

@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
-@EnableJpaRepositories("com.brianwilens.cloudnativeuploader.api.dao")
+@EnableJpaRepositories("com.brianwilens.cloudnativeuploader.lib.dao")
 public class CloudNativeUploaderConfiguration {
 
 }

@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "landing-bucket",
+      "type": "java.lang.String",
+      "description": "Description for landing-bucket."
+    },
+    {
+      "name": "file-name-limit",
+      "type": "java.lang.String",
+      "description": "Description for file-name-limit."
+    }
+  ] }
