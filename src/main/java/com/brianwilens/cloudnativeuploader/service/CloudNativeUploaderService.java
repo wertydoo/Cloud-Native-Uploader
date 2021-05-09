@@ -4,31 +4,26 @@ import com.brianwilens.cloudnativeuploader.lib.dao.FileRepo;
 import com.brianwilens.cloudnativeuploader.lib.exceptions.BwException;
 import com.brianwilens.cloudnativeuploader.lib.exceptions.CloudNativeUploaderExceptionEnums;
 import com.brianwilens.cloudnativeuploader.lib.models.File;
-import com.google.api.client.util.Value;
 import com.google.cloud.storage.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
-
+import org.jetbrains.annotations.*;
 import java.io.IOException;
-import java.util.Locale;
 import java.util.Objects;
-import java.util.Optional;
-import java.util.concurrent.atomic.AtomicReference;
 
 @Service
 public class CloudNativeUploaderService {
     //Globals
-    //TODO: fix injection
-    //@Value("${landing-bucket}")
-    private final String landingBucket = "uploader-landing-bucket";
-    //TODO: fix injection
-    //@Value("${file-name-limit}")
-    private final int fileNameLimit = 255;
+    @Value("${landing-bucket}")
+    private String landingBucket;
+    @Value("${file-name-limit}")
+    private int fileNameLimit;
 
     private final Storage storage;
-    private FileRepo fileRepo;
+    private final FileRepo fileRepo;
 
     //Constructor
     @Autowired
@@ -38,7 +33,7 @@ public class CloudNativeUploaderService {
     }
 
     //TEST FUNCTION
-    public String dummyFunction(String msg) throws BwException {
+    public String dummyFunction(@NotNull String msg) throws BwException {
         if(!msg.equals("Brian")) {
             throw new BwException(
                     CloudNativeUploaderExceptionEnums.TESTING_EXCEPTIONS.getStatus(),
